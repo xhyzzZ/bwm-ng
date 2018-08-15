@@ -16,7 +16,7 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
   constructor(private mapService: MapService,
               private ref: ChangeDetectorRef) { }
 
@@ -29,6 +29,7 @@ export class MapComponent implements OnInit {
       this.ref.detectChanges();
     }, () => {
       this.isPositionError = true;
+      this.ref.detectChanges();
     });
   }
 }
